@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1665436691 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
+1665441699 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
 	<iostream>
 	<cstring>
 	"funciones.h"
@@ -19,9 +19,39 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1665436256 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.cpp
+1665440367 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.cpp
 	"funciones.h"
 	"rlutil.h"
 
-1665436256 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
+1665440405 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
+
+1665441719 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1665441699 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\fecha.h
+
+1665445068 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\ubicacion.cpp
+	<iostream>
+	<cstring>
+	"Ubicacion.h"
+
+1665445068 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\ubicacion.h
+	<iostream>
+
+1665443523 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\recruiter.cpp
+	<cstring>
+	"Recruiter.h"
+
+1665443354 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\recruiter.h
+	<iostream>
+
+1665445067 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresa.cpp
+	<iostream>
+	<cstring>
+	"Empresa.h"
+
+1665445068 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresa.h
+	<iostream>
+	"Ubicacion.h"
 
