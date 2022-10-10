@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1665436691 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"rlutil.h"
+
+1656724346 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1665436256 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.cpp
+	"funciones.h"
+	"rlutil.h"
+
+1665436256 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
+
