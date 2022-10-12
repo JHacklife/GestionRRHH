@@ -36,6 +36,8 @@
 		<Unit filename="Empresa.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Recruiter.cpp" />
 		<Unit filename="Recruiter.h" />
 		<Unit filename="Ubicacion.cpp" />

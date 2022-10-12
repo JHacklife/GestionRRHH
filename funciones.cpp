@@ -34,46 +34,35 @@ void DivisorHorizontal(int y, char figura){
 
 
 
-void cartel(int posx,int posy, int ancho, int alto, int margen){
+void cartel(int posx, int posy, int ancho, int alto) {
 
-        posx -= margen;
-        posy -= margen;
-        ancho += (margen*2)-1;
-        alto -=1;
-        for(int i=posx; i<posx+ancho; i++){
-
-            rlutil::locate(i,posy);
-            cout<<"-";
-            rlutil::locate(i,posy+alto);
-            cout<<"-";
+        for (int i = posx; i < posx + ancho; i++) {
+            rlutil::locate(i, posy);
+            cout << "-";
+            rlutil::locate(i, posy + alto);
+            cout << "-";
         }
 
-        for(int i=posy; i<posy+alto; i++){
-
-            rlutil::locate(posx,i);
-            cout<<"|";
-            rlutil::locate(posx+ancho,i);
-            cout<<"|";
+        for (int i = posy; i < posy + alto; i++) {
+            rlutil::locate(posx, i);
+            cout << "|";
+            rlutil::locate(posx + ancho, i);
+            cout << "|";
         }
 
-        rlutil::locate(posx,posy);
-        cout<<"+";
-        rlutil::locate(posx+ancho,posy);
-        cout<<"+";
-        rlutil::locate(posx,alto+posy);
-        cout<<"+";
-        rlutil::locate(posx+ancho,alto+posy);
-        cout<<"+";
+        rlutil::locate(posx, posy);
+        cout << "+";
+        rlutil::locate(posx + ancho, posy);
+        cout << "+";
+        rlutil::locate(posx, alto + posy);
+        cout << "+";
+        rlutil::locate(posx + ancho, alto + posy);
+        cout << "+";
+    }
 
-}
 
+void Borrarcartel(int posx,int posy, int ancho, int alto){
 
-void Borrarcartel(int posx,int posy, int ancho, int alto, int margen){
-
-        posx -= margen;
-        posy -= margen;
-        ancho += (margen*2)-1;
-        alto -=1;
         for(int i=posx; i<posx+ancho; i++){
 
             rlutil::locate(i,posy);

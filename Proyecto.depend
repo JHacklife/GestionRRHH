@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1665441699 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
+1665542062 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
 	<iostream>
 	<cstring>
 	"funciones.h"
 	"rlutil.h"
+	"Menu.h"
 
 1656724346 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\rlutil.h
 	<iostream>
@@ -19,11 +20,11 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1665440367 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.cpp
+1665531522 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.cpp
 	"funciones.h"
 	"rlutil.h"
 
-1665440405 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
+1665531522 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
 
 1665441719 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\fecha.cpp
 	<iostream>
@@ -54,4 +55,30 @@
 1665445068 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresa.h
 	<iostream>
 	"Ubicacion.h"
+
+1665533500 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\menu.h
+
+1665533493 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\menu.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"Menu.h"
+
+1665611845 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresatrabajada.cpp
+	<iostream>
+	<cstring>
+	"EmpresaTrabajada.h"
+
+1665611845 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresatrabajada.h
+	"Empresa.h"
+	"Fecha.h"
+
+1665612350 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.cpp
+	<iostream>
+	<cstring>
+	"Candidato.h"
+
+1665612050 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.h
+	<cstring>
+	"EmpresaTrabajada.h"
 
