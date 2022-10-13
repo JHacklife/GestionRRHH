@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1665630543 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
+1665639646 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
 	<iostream>
 	<cstring>
 	"funciones.h"
@@ -36,7 +36,7 @@
 
 1665616629 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\fecha.h
 
-1665445068 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\ubicacion.cpp
+1665638351 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\ubicacion.cpp
 	<iostream>
 	<cstring>
 	"Ubicacion.h"
@@ -51,7 +51,7 @@
 1665619383 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\recruiter.h
 	<iostream>
 
-1665623359 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresa.cpp
+1665640174 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresa.cpp
 	<iostream>
 	<cstring>
 	"Empresa.h"
@@ -68,7 +68,7 @@
 	"rlutil.h"
 	"Menu.h"
 
-1665623359 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresatrabajada.cpp
+1665682063 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\empresatrabajada.cpp
 	<iostream>
 	<cstring>
 	"EmpresaTrabajada.h"
@@ -77,12 +77,12 @@
 	"Empresa.h"
 	"Fecha.h"
 
-1665630406 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.cpp
+1665681973 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.cpp
 	<iostream>
-	<cstring>
+	<string>
 	"Candidato.h"
 
-1665630338 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.h
+1665684137 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.h
 	<cstring>
 	"EmpresaTrabajada.h"
 
@@ -103,4 +103,11 @@
 	<iostream>
 	<cstring>
 	"funciones.h"
+
+1665683792 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\archivobusquedas.cpp
+	<iostream>
+	"ArchivoBusquedas.h"
+
+1665683750 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\archivobusquedas.h
+	"Busqueda.h"
 

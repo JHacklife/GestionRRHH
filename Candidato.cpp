@@ -1,5 +1,6 @@
 #include <iostream>
-#include <cstring>
+//#include <cstring>
+#include <string>
 using namespace std;
 #include "Candidato.h"
 
@@ -70,7 +71,7 @@ void Candidato::CargaDeStack(){
     //Vacio el vector para validar luego
     for(int i=0; i<10; i++){
 
-        cout<<" ";
+        vStack[i]=" ";
     }
 
     char opcion;
@@ -82,7 +83,8 @@ void Candidato::CargaDeStack(){
 
             string aux;
             cout<<"Ingrese Lenguaje/Herramienta: ";
-            cin>>aux;
+            cin.ignore();
+            getline(cin,aux);
             vStack[i]=aux;
         }
         else{i=10;}
@@ -94,72 +96,77 @@ void Candidato::Cargar(){
 
     cout<<"DNI: ";
     cin>>dni;
-    string aux;
 
+    cin.ignore();
+    string aux;
     cout<<endl<<"Nombre: ";
-    cin>>aux;
+    getline(cin,aux);
     strcpy(nombre,aux.c_str());
 
     cout<<endl<<"Apellido: ";
-    cin>>aux;
+    getline(cin,aux);
     strcpy(apellido,aux.c_str());
 
+
     cout<<endl<<"Mail: ";
-    cin>>aux;
+    getline(cin,aux);
     strcpy(mail,aux.c_str());
 
-    cout<<"Telefono: ";
+
+    cout<<endl<<"Telefono: ";
     cin>>telefono;
 
     //HACER FUNCION PRIVADA EN CLASE CANDIDATO PARA ESTO. EJ : void CargaExperiencia()
     char opcion;
 
-    for(int i=0; i<cant_empresas; i++){
+    for(int i=0; i<3; i++){
 
         cout<<endl<<"Desea Cargar una Empresa? S/N : ";
         cin>>opcion;
         if(toupper(opcion)=='S'){
+            cin.ignore();
             vEmpresas[i].EmpresaTrabajada::Cargar();
         }
         else{
-            i=cant_empresas;
+            i=3;
         }
     }
 
+    cin.ignore();
     cout<<endl<<"Seniority: ";
-    cin>>aux;
+    getline(cin,aux);
     strcpy(seniority,aux.c_str());
     cout<<endl;
 
     CargaDeStack();
 
+    cin.ignore();
     cout<<endl<<"Ubicacion: "<<endl;
     ubicacion.Cargar();
 
 
-    cout<<"Salario pretendido: "<<salarioPretendido<<endl;
+    cout<<"Salario pretendido: ";
+    cin>>salarioPretendido;
 
 
 }
 
+
+
 void Candidato::Mostrar(){
 
+    cout<<"Contacto: "<<endl;
+    cout<<"----------"<<endl;
     cout<<"DNI: "<<dni<<endl;
     cout<<"Nombre: "<<nombre<<endl;
     cout<<"Apellido: "<<apellido<<endl;
-    cout<<"Nombre: "<<nombre<<endl;
     cout<<"Mail: "<<mail<<endl;
     cout<<"Telefono: "<<telefono<<endl;
-    cout<<"Experiencia: "<<endl;
-    for(int i=0; i<cant_empresas; i++){
 
-        if(vEmpresas[i].getEstado()){
-            vEmpresas[i].EmpresaTrabajada::Mostrar();
-            cout<<endl;
-        }
-    }
+    ubicacion.Mostrar();
+    cout<<endl;
 
-    cout<<"Seniority: "<<seniority<<endl;
+    cout<<"Seniority: "<<seniority<<endl<<endl;
     cout<<"Stack:"<<endl;
     for(int i=0; i<10; i++){
 
@@ -167,10 +174,18 @@ void Candidato::Mostrar(){
             cout<<vStack[i]<<endl;
         }
     }
+    cout<<endl;
 
-    ubicacion.Mostrar();
+    cout<<"Experiencia: "<<endl<<endl;
+    for(int i=0; i<3; i++){
 
-    cout<<endl<<"Salario Pretendido: "<<salarioPretendido<<endl;
+        if(vEmpresas[i].getEstado()){
+            vEmpresas[i].Mostrar();
+            cout<<endl;
+        }
+    }
+
+    cout<<"Salario Pretendido: "<<salarioPretendido<<endl;
     cout<<"---------------------------------------------------"<<endl;
 
 }

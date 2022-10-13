@@ -13,7 +13,7 @@ private:
     char nombre[15];
     char apellido[15];
     char mail[30];
-    int telefono;
+    long int telefono;
     EmpresaTrabajada vEmpresas[cant_empresas];
     char seniority[4];
     string vStack[10];

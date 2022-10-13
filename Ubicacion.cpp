@@ -37,19 +37,22 @@ Ubicacion::Ubicacion(){
 
 void Ubicacion::Cargar(){
 
+
     string aux;
     cout<<"Pais: ";
-    cin>>aux;
+    getline(cin,aux);
     setPais(aux);
     cout<<endl;
 
+
     cout<<"Provincia: ";
-    cin>>aux;
+    getline(cin,aux);
     setProvincia(aux);
     cout<<endl;
 
+
     cout<<"Ciudad: ";
-    cin>>aux;
+    getline(cin,aux);
     setCiudad(aux);
     cout<<endl;
 }

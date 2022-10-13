@@ -39,12 +39,12 @@ void Empresa::Cargar(){
 
     string aux;
     cout<<"Codigo de empresa: ";
-    cin>>aux;
+    getline(cin,aux);
     setCodigo(aux);
     cout<<endl;
 
     cout<<"Nombre : ";
-    cin>>aux;
+    getline(cin,aux);
     setNombre(aux);
     cout<<endl;
 
@@ -56,16 +56,17 @@ void Empresa::Cargar(){
     cin>>telRRHH;
     cout<<endl;
 
+    cin.ignore();
     cout<<"Ubicacion: "<<endl;
     ubicacion.Cargar();
 }
 
 void Empresa::Mostrar(){
 
-    cout<<cod<<endl;
-    cout<<nombre<<endl;
-    cout<<CUIT<<endl;
-    cout<<telRRHH<<endl;
+    cout<<"Codigo: ["<<cod<<"]"<<endl;
+    cout<<"Nombre: "<<nombre<<endl;
+    cout<<"CUIT: "<<CUIT<<endl;
+    cout<<"Tel.RRHH: "<<telRRHH<<endl;
     ubicacion.Mostrar();
     cout<<endl;
 

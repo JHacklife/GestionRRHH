@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+using namespace std;
 #include "funciones.h"
 #include "rlutil.h"
 #include "Menu.h"
@@ -7,7 +8,6 @@
 #include "ArchivoCandidatos.h"
 #include "EmpresaTrabajada.h"
 #include "Recruiter.h"
-using namespace std;
 
 
 
@@ -152,5 +152,17 @@ int main()
     DivisorHorizontal(28,'=');
     //rlutil::hidecursor();
     rlutil::anykey();
+
+    Candidato candidato;
+    ArchivoCandidatos archivocandi;
+    rlutil::cls();
+
+    cout<<"Muestra: "<<endl;
+
+    candidato = archivocandi.leer(0);
+    candidato.Mostrar();
+
+
+
 
 }

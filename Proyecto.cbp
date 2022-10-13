@@ -32,8 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoBusquedas.cpp" />
+		<Unit filename="ArchivoBusquedas.h" />
+		<Unit filename="ArchivoCandidatos.cpp" />
+		<Unit filename="ArchivoCandidatos.h" />
+		<Unit filename="Busqueda.cpp" />
+		<Unit filename="Busqueda.h" />
+		<Unit filename="Candidato.cpp" />
+		<Unit filename="Candidato.h" />
 		<Unit filename="Empresa.cpp" />
 		<Unit filename="Empresa.h" />
+		<Unit filename="EmpresaTrabajada.cpp" />
+		<Unit filename="EmpresaTrabajada.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Menu.cpp" />

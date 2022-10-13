@@ -40,10 +40,12 @@ void EmpresaTrabajada::Cargar(){
     Empresa::Cargar();
     string aux;
     cout<<"Seniority: ";
-    cin>>aux;
+    getline(cin,aux);
     cout<<endl;
     strcpy(seniority,aux.c_str());
+    cout<<endl<<"Fecha de ingreso:"<<endl;
     fechaIngreso.cargar();
+    cout<<"Fecha de egreso:"<<endl;
     fechaEgreso.cargar();
     estado=true;
 }
@@ -51,9 +53,9 @@ void EmpresaTrabajada::Cargar(){
 void EmpresaTrabajada::Mostrar(){
 
     Empresa::Mostrar();
-    cout<<"Seniority: "<<seniority<<endl;
+    cout<<"Seniority en la empresa: "<<seniority<<endl;
     cout<<"Fecha de ingreso: ";
     fechaIngreso.mostrar();
-    cout<<endl<<"Fecha de Egreso: ";
+    cout<<"Fecha de Egreso: ";
     fechaEgreso.mostrar();
 }

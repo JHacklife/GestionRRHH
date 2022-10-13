@@ -39,6 +39,56 @@ void Busqueda::Cargar(){
     cout<<endl<<"ID del Recruiter: ";
     cin>>idRecruiter;
 
-    cout<<endl<<"";
+    cout<<endl<<"Oferta salarial: $";
+    cin>>oferta_salarial;
+
+    cout<<endl<<"¿ Acepta trabajo Remoto ? S/N : ";
+    char op;
+    cin>>op;
+    if(toupper(op)=='S'){
+        remoto=true;
+    }
+    else{remoto=false;}
+
+    cout<<endl;
+
+    string aux;
+    cin.ignore();
+    cout<<"Nivel de Ingles: ";
+    getline(cin,aux);
+    strcpy(nivel_ingles,aux.c_str());
+
+    cout<<endl;
+
+    cout<<"Agregar stack? S/N : ";
+
+    //Funcion para cargar vector de Stack
+    cin>>op;
+    int i=0;
+    while(toupper(op)=='S' && i<cant_stack){
+
+        cin.ignore();
+        cout<<"Ingrese stack: ";
+        getline(cin,Stack[i]);
+        i++;
+        if(i<cant_stack){
+            cout<<endl<<"Seguir cargando stack? S/N : ";
+            cin>>op;
+        }
+        else{op='N';}
+
+    }
+    cout<<endl;
+
+    cout<<"Anios de Exp: ";
+    cin>>aniosExp;
+
+    cout<<endl<<"Seniority: ";
+    cin.ignore();
+    getline(cin,aux);
+    strcpy(seniority,aux.c_str());
+
+    activa=true;
+    cout<<endl<<"========================================================"<<endl;
 
 }
