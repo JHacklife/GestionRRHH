@@ -3,6 +3,10 @@
 #include "funciones.h"
 #include "rlutil.h"
 #include "Menu.h"
+#include "Busqueda.h"
+#include "ArchivoCandidatos.h"
+#include "EmpresaTrabajada.h"
+#include "Recruiter.h"
 using namespace std;
 
 
@@ -148,5 +152,5 @@ int main()
     DivisorHorizontal(28,'=');
     //rlutil::hidecursor();
     rlutil::anykey();
-    return 0;
+
 }

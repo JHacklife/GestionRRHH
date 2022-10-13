@@ -52,7 +52,13 @@ EmpresaTrabajada *Candidato::getEmpresasTrabajadas(){return vEmpresas;}
 
 string Candidato::getSeniority(){return seniority;}
 
-string *Candidato::getStack(){return vStack;}
+void Candidato::getStack(string *vec){
+
+    for(int i=0; i<10; i++){
+        vec[i]="-";
+        vec[i]=vStack[i];
+    }
+}
 
 Ubicacion Candidato::getUbicacion(){return ubicacion;}
 
@@ -62,13 +68,13 @@ float Candidato::getSalarioPretendido(){return salarioPretendido;}
 void Candidato::CargaDeStack(){
 
     //Vacio el vector para validar luego
-    for(int i=0; i<cant_stack; i++){
+    for(int i=0; i<10; i++){
 
         cout<<" ";
     }
 
     char opcion;
-    for(int i=0; i<cant_stack; i++){
+    for(int i=0; i<10; i++){
 
         cout<<"Cargar stack S/N: ";
         cin>>opcion;
@@ -79,7 +85,7 @@ void Candidato::CargaDeStack(){
             cin>>aux;
             vStack[i]=aux;
         }
-        else{i=cant_stack;}
+        else{i=10;}
     }
 }
 
@@ -155,7 +161,7 @@ void Candidato::Mostrar(){
 
     cout<<"Seniority: "<<seniority<<endl;
     cout<<"Stack:"<<endl;
-    for(int i=0; i<cant_stack; i++){
+    for(int i=0; i<10; i++){
 
         if(vStack[i]!=" "){
             cout<<vStack[i]<<endl;

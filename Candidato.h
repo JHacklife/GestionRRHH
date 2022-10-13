@@ -5,7 +5,7 @@
 #include "EmpresaTrabajada.h"
 
 const int cant_empresas = 3;
-const int cant_stack = 10;
+
 class Candidato {
 
 private:
@@ -16,7 +16,7 @@ private:
     int telefono;
     EmpresaTrabajada vEmpresas[cant_empresas];
     char seniority[4];
-    string vStack[cant_stack];
+    string vStack[10];
     Ubicacion ubicacion;
     float salarioPretendido;
 
@@ -40,7 +40,7 @@ public:
     int getTelefono();
     EmpresaTrabajada *getEmpresasTrabajadas();
     string getSeniority();
-    string *getStack();
+    void getStack(string vec[]);
     Ubicacion getUbicacion();
     float getSalarioPretendido();
     void Cargar();

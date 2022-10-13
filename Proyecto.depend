@@ -1,10 +1,14 @@
 # depslib dependency file v1.0
-1665616629 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
+1665630543 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\main.cpp
 	<iostream>
 	<cstring>
 	"funciones.h"
 	"rlutil.h"
 	"Menu.h"
+	"Busqueda.h"
+	"ArchivoCandidatos.h"
+	"EmpresaTrabajada.h"
+	"Recruiter.h"
 
 1656724346 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\rlutil.h
 	<iostream>
@@ -24,7 +28,7 @@
 	"funciones.h"
 	"rlutil.h"
 
-1665531522 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
+1665629920 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\funciones.h
 
 1665616629 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\fecha.cpp
 	<iostream>
@@ -73,12 +77,30 @@
 	"Empresa.h"
 	"Fecha.h"
 
-1665623372 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.cpp
+1665630406 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.cpp
 	<iostream>
 	<cstring>
 	"Candidato.h"
 
-1665622050 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.h
+1665630338 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\candidato.h
 	<cstring>
 	"EmpresaTrabajada.h"
+
+1665626465 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\archivocandidatos.cpp
+	<cstring>
+	"ArchivoCandidatos.h"
+
+1665626436 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\archivocandidatos.h
+	<iostream>
+	"Candidato.h"
+
+1665630632 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\busqueda.cpp
+	<iostream>
+	<cstring>
+	"Busqueda.h"
+
+1665630543 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\proyecto\busqueda.h
+	<iostream>
+	<cstring>
+	"funciones.h"
 
