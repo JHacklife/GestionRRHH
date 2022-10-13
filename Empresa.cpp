@@ -67,6 +67,6 @@ void Empresa::Mostrar(){
     cout<<CUIT<<endl;
     cout<<telRRHH<<endl;
     ubicacion.Mostrar();
-    cout<<"---------------------------------"<<endl;
+    cout<<endl;
 
 }

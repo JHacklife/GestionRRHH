@@ -4,6 +4,11 @@
 
 using namespace std;
 
+//Constructor
+EmpresaTrabajada::EmpresaTrabajada(){
+    setEstado(false);
+}
+
 
 void EmpresaTrabajada::setSeniority(string sen){
 
@@ -29,3 +34,26 @@ Fecha EmpresaTrabajada::getFechasIngreso(){return fechaIngreso;}
 Fecha EmpresaTrabajada::getFechaEgreso(){return fechaEgreso;}
 
 bool EmpresaTrabajada::getEstado(){return estado;}
+
+void EmpresaTrabajada::Cargar(){
+
+    Empresa::Cargar();
+    string aux;
+    cout<<"Seniority: ";
+    cin>>aux;
+    cout<<endl;
+    strcpy(seniority,aux.c_str());
+    fechaIngreso.cargar();
+    fechaEgreso.cargar();
+    estado=true;
+}
+
+void EmpresaTrabajada::Mostrar(){
+
+    Empresa::Mostrar();
+    cout<<"Seniority: "<<seniority<<endl;
+    cout<<"Fecha de ingreso: ";
+    fechaIngreso.mostrar();
+    cout<<endl<<"Fecha de Egreso: ";
+    fechaEgreso.mostrar();
+}

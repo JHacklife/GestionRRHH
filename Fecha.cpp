@@ -19,3 +19,14 @@ void Fecha::mostrar(){
     cout << _dia << "/" << _mes << "/" << _anio << endl;
 }
 
+void Fecha::cargar(){
+
+    cout<<"Dia: ";
+    cin>>_dia;
+
+    cout<<endl<<"Mes: ";
+    cin>>_mes;
+
+    cout<<endl<<"Anio: ";
+    cin>>_anio;
+}

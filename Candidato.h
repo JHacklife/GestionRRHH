@@ -4,6 +4,8 @@
 #include <cstring>
 #include "EmpresaTrabajada.h"
 
+const int cant_empresas = 3;
+const int cant_stack = 10;
 class Candidato {
 
 private:
@@ -12,11 +14,13 @@ private:
     char apellido[15];
     char mail[30];
     int telefono;
-    EmpresaTrabajada vEmpresas[3];
+    EmpresaTrabajada vEmpresas[cant_empresas];
     char seniority[4];
-    string vStack[10];
+    string vStack[cant_stack];
     Ubicacion ubicacion;
     float salarioPretendido;
+
+    void CargaDeStack();
 public:
     void setDNI(int d);
     void setNombre(string n);
@@ -39,6 +43,8 @@ public:
     string *getStack();
     Ubicacion getUbicacion();
     float getSalarioPretendido();
+    void Cargar();
+    void Mostrar();
 
 };
 

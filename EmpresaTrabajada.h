@@ -20,7 +20,9 @@ public:
     Fecha getFechasIngreso();
     Fecha getFechaEgreso();
     bool getEstado();
-
+    EmpresaTrabajada();
+    void Cargar();
+    void Mostrar();
 
 };
 

@@ -11,6 +11,7 @@ class Fecha
         void setMes(int mes);
         int getAnio();
         void setAnio(int anio);
+        void cargar();
         void mostrar();
 
     private:

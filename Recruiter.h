@@ -20,7 +20,8 @@ public:
     string getPassword();
     string getNombre();
     string getApellido();
-
+    void Cargar();
+    void Mostrar();
 };
 
 

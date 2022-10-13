@@ -143,11 +143,10 @@ int main()
     rlutil::locate(46,20);                  // Muestra la informacion de Las empresas que son clientes.
     cout<<"0 - VOLVER A LOGIN"<<endl;
 
+    DivisorHorizontal(26,'=');
+    DivisorHorizontal(27,'|');
     DivisorHorizontal(28,'=');
-    DivisorHorizontal(29,'|');
-    DivisorHorizontal(30,'=');
-    rlutil::hidecursor();
+    //rlutil::hidecursor();
     rlutil::anykey();
-
     return 0;
 }
