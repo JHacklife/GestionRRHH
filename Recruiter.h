@@ -1,8 +1,8 @@
 #ifndef RECRUITER_H_INCLUDED
 #define RECRUITER_H_INCLUDED
-
 #include <iostream>
 using namespace std;
+
 class Recruiter {
 
 private:
@@ -23,7 +23,5 @@ public:
     void Cargar();
     void Mostrar();
 };
-
-
 
 #endif // RECRUITER_H_INCLUDED

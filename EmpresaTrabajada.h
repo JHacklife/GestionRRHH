@@ -3,8 +3,7 @@
 #include "Empresa.h"
 #include "Fecha.h"
 
-class EmpresaTrabajada : public Empresa {
-
+class EmpresaTrabajada: public Empresa {
 private:
     char seniority[4];
     Fecha fechaIngreso;
@@ -23,7 +22,6 @@ public:
     EmpresaTrabajada();
     void Cargar();
     void Mostrar();
-
 };
 
 #endif // EMPRESATRABAJADA_H_INCLUDED
