@@ -9,7 +9,11 @@
 #include "Recruiter.h"
 using namespace std;
 
-int main() {
+
+
+
+int main()
+{
     rlutil::setBackgroundColor(rlutil::BLUE);
     rlutil::cls();
 
@@ -97,54 +101,56 @@ int main() {
 
 
  */
- //llamada a Clase menu
- /*
- char titulo[] = "MENU PRINCIPAL";
- char opciones[10][50] = {
-     "Opcion 1",
-     "Opcion 2",
-     "Opcion 3",
-     "Opcion 4",
-     "Opcion 5",
-     "Opcion 6",
-     "Opcion 7",
-     "Opcion 8",
-     "Opcion 9",
-     "Opcion 10"
- };
+    //llamada a Clase menu
+    /*
+    char titulo[] = "MENU PRINCIPAL";
+    char opciones[10][50] = {
+        "Opcion 1",
+        "Opcion 2",
+        "Opcion 3",
+        "Opcion 4",
+        "Opcion 5",
+        "Opcion 6",
+        "Opcion 7",
+        "Opcion 8",
+        "Opcion 9",
+        "Opcion 10"
+    };
 
- Menu menu(1, 1, ANCHO_VENTANA, ALTO_VENTANA, titulo, 10, opciones);
- menu.cartel(5, 5, 20, 10);
- menu.setTitulo(6, 6, titulo, 10);
- DivisorHorizontal(20, '-');
- */
+    Menu menu(1, 1, ANCHO_VENTANA, ALTO_VENTANA, titulo, 10, opciones);
+    menu.cartel(5, 5, 20, 10);
+    menu.setTitulo(6, 6, titulo, 10);
+    DivisorHorizontal(20, '-');
+    */
 
 
- //Menu PPAL
+    //Menu PPAL
 
     rlutil::cls();
+
     rlutil::setColor(rlutil::YELLOW);
-    DivisorHorizontal(1, '=');
-    DivisorHorizontal(2, '|');
-    DivisorHorizontal(3, '=');
+    DivisorHorizontal(1,'=');
+    DivisorHorizontal(2,'|');
+    DivisorHorizontal(3,'=');
 
-    cartel(44, 10, 32, 12);
+    cartel(44,10,32,12);
 
-    rlutil::locate(46, 12);
-    cout << "1 - BUSQUEDAS" << endl;
-    rlutil::locate(46, 14);                   //Ver busquedas asignadas al recruiter y poder seleccionar una
-    cout << "2 - SELECCION DE CANDIDATOS" << endl;
-    rlutil::locate(46, 16);    // Busca candidatos para la busqueda activa (Si no hay activa informa con cartel) // MENU CON OPCIONES DE FILTRADO, GUARDA CANDIDATOS SELECCIONADOS
-    cout << "3 - ENVIO DE SELECCION" << endl;
-    rlutil::locate(46, 18);        // ENVIA AL CLIENTE DE BUSQUEDA LOS CANDIDATOS ELEGIDOS EN "SELECCION DE CANDIDATOS"
-    cout << "4 - DATOS DE CLIENTES" << endl;
-    rlutil::locate(46, 20);                  // Muestra la informacion de Las empresas que son clientes.
-    cout << "0 - VOLVER A LOGIN" << endl;
 
-    DivisorHorizontal(26, '=');
-    DivisorHorizontal(27, '|');
-    DivisorHorizontal(28, '=');
+    rlutil::locate(46,12);
+    cout<<"1 - BUSQUEDAS"<<endl;
+    rlutil::locate(46,14);                   //Ver busquedas asignadas al recruiter y poder seleccionar una
+    cout<<"2 - SELECCION DE CANDIDATOS"<<endl;
+    rlutil::locate(46,16);    // Busca candidatos para la busqueda activa (Si no hay activa informa con cartel) // MENU CON OPCIONES DE FILTRADO, GUARDA CANDIDATOS SELECCIONADOS
+    cout<<"3 - ENVIO DE SELECCION"<<endl;
+    rlutil::locate(46,18);        // ENVIA AL CLIENTE DE BUSQUEDA LOS CANDIDATOS ELEGIDOS EN "SELECCION DE CANDIDATOS"
+    cout<<"4 - DATOS DE CLIENTES"<<endl;
+    rlutil::locate(46,20);                  // Muestra la informacion de Las empresas que son clientes.
+    cout<<"0 - VOLVER A LOGIN"<<endl;
+
+    DivisorHorizontal(26,'=');
+    DivisorHorizontal(27,'|');
+    DivisorHorizontal(28,'=');
     //rlutil::hidecursor();
     rlutil::anykey();
-    return 0;
+
 }

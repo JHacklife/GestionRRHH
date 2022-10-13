@@ -1,8 +1,10 @@
 #ifndef UBICACION_H_INCLUDED
 #define UBICACION_H_INCLUDED
-#include <iostream>
-using namespace std;
 
+
+#include <iostream>
+
+using namespace std;
 class Ubicacion {
 
 private:
@@ -20,6 +22,9 @@ public:
     void Cargar();
     void Mostrar();
     Ubicacion();
+
+
 };
+
 
 #endif // UBICACION_H_INCLUDED
