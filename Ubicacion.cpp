@@ -3,62 +3,44 @@
 #include "Ubicacion.h"
 using namespace std;
 
-void Ubicacion::setPais(string p){
+void Ubicacion::setPais(string p) { strcpy(pais, p.c_str()); }
+void Ubicacion::setCiudad(string ciu) { strcpy(ciudad, ciu.c_str()); }
+void Ubicacion::setProvincia(string prov) { strcpy(provincia, prov.c_str()); }
 
-    strcpy(pais,p.c_str());
-}
+string Ubicacion::getCiudad() { return ciudad; }
+string Ubicacion::getProvincia() { return provincia; }
+string Ubicacion::getPais() { return pais; }
 
-void Ubicacion::setCiudad(string ciu){
-
-    strcpy(ciudad,ciu.c_str());
-}
-
-void Ubicacion::setProvincia(string prov){
-
-    strcpy(provincia,prov.c_str());
-}
-
-string Ubicacion::getCiudad(){return ciudad;}
-
-string Ubicacion::getProvincia(){return provincia;}
-
-string Ubicacion::getPais(){return pais;}
-
-Ubicacion::Ubicacion(){
-
-    pais[0]='-';
-    pais[1]='\0';
-    provincia[0]='-';
-    provincia[1]='\0';
-    ciudad[0]='-';
-    ciudad[1]='\0';
+Ubicacion::Ubicacion() {
+    pais[0] = '-';
+    pais[1] = '\0';
+    provincia[0] = '-';
+    provincia[1] = '\0';
+    ciudad[0] = '-';
+    ciudad[1] = '\0';
 }
 
 
-void Ubicacion::Cargar(){
-
+void Ubicacion::Cargar() {
     string aux;
-    cout<<"Pais: ";
-    cin>>aux;
+    cout << "Pais: ";
+    cin >> aux;
     setPais(aux);
-    cout<<endl;
+    cout << endl;
 
-    cout<<"Provincia: ";
-    cin>>aux;
+    cout << "Provincia: ";
+    cin >> aux;
     setProvincia(aux);
-    cout<<endl;
+    cout << endl;
 
-    cout<<"Ciudad: ";
-    cin>>aux;
+    cout << "Ciudad: ";
+    cin >> aux;
     setCiudad(aux);
-    cout<<endl;
+    cout << endl;
 }
 
-void Ubicacion::Mostrar(){
-
-    cout<<"Pais: "<<pais<<endl;
-
-    cout<<"Provincia: "<<provincia<<endl;
-
-    cout<<"Ciudad: "<<ciudad<<endl;
+void Ubicacion::Mostrar() {
+    cout << "Pais: " << pais << endl;
+    cout << "Provincia: " << provincia << endl;
+    cout << "Ciudad: " << ciudad << endl;
 }
