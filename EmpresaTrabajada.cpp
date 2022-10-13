@@ -39,7 +39,7 @@ void EmpresaTrabajada::Mostrar() {
 void Empresa ArchivoEmpresaTrabajada::leer(int pos) {
     Empresa empresaTrabajada;
     FILE* p;
-    p = fopen("Candidatos.dat", "rb");
+    p = fopen("EmpresaTrabajada.dat", "rb");
     if (p == nullptr) { return empresaTrabajada; }
 
     fseek(p, sizeof(Empresa) * pos, SEEK_SET);
@@ -50,7 +50,7 @@ void Empresa ArchivoEmpresaTrabajada::leer(int pos) {
 
 bool ArchivoEmpresaTrabajada::guardar(Empresa empresaTrabajada) {
     FILE* p;
-    p = fopen("Candidatos.dat", "ab");
+    p = fopen("EmpresaTrabajada.dat", "ab");
     if (p == nullptr) { return false; }
 
     bool ok = fwrite(&empresaTrabajada, sizeof(Empresa), 1, p);
@@ -61,7 +61,7 @@ bool ArchivoEmpresaTrabajada::guardar(Empresa empresaTrabajada) {
 
 bool ArchivoEmpresaTrabajada::Modificar(Empresa empresaTrabajada, int pos) {
     FILE* p;
-    p = fopen("Candidatos.dat", "rb+");
+    p = fopen("EmpresaTrabajada.dat", "rb+");
     if (p == nullptr) { return false; }
 
     fseek(p, sizeof(Empresa) * pos, SEEK_SET);
@@ -72,7 +72,7 @@ bool ArchivoEmpresaTrabajada::Modificar(Empresa empresaTrabajada, int pos) {
 
 int ArchivoEmpresaTrabajada::getCantidad() {
     FILE* p;
-    p = fopen("Candidatos.dat", "rb");
+    p = fopen("EmpresaTrabajada.dat", "rb");
     if (p == nullptr) { return 0; }
 
     fseek(p, 0, SEEK_END);

@@ -47,7 +47,7 @@ void Recruiter::Mostrar() {
 void Recruiter ArchivoRecruiter::leer(int pos) {
     Recruiter recruiter;
     FILE* p;
-    p = fopen("Candidatos.dat", "rb");
+    p = fopen("Recruiter.dat", "rb");
     if (p == nullptr) { return recruiter; }
 
     fseek(p, sizeof(Recruiter) * pos, SEEK_SET);
@@ -58,7 +58,7 @@ void Recruiter ArchivoRecruiter::leer(int pos) {
 
 bool ArchivoRecruiter::guardar(Recruiter recruiter) {
     FILE* p;
-    p = fopen("Candidatos.dat", "ab");
+    p = fopen("Recruiter.dat", "ab");
     if (p == nullptr) { return false; }
 
     bool ok = fwrite(&recruiter, sizeof(Recruiter), 1, p);
@@ -68,7 +68,7 @@ bool ArchivoRecruiter::guardar(Recruiter recruiter) {
 
 bool ArchivoRecruiter::Modificar(Recruiter recruiter, int pos) {
     FILE* p;
-    p = fopen("Candidatos.dat", "rb+");
+    p = fopen("Recruiter.dat", "rb+");
     if (p == nullptr) { return false; }
 
     fseek(p, sizeof(Recruiter) * pos, SEEK_SET);
@@ -79,7 +79,7 @@ bool ArchivoRecruiter::Modificar(Recruiter recruiter, int pos) {
 
 int ArchivoRecruiter::getCantidad() {
     FILE* p;
-    p = fopen("Candidatos.dat", "rb");
+    p = fopen("Recruiter.dat", "rb");
     if (p == nullptr) { return 0; }
 
     fseek(p, 0, SEEK_END);
