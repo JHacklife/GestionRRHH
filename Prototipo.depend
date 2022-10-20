@@ -1,0 +1,150 @@
+# depslib dependency file v1.0
+1666236118 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivocandidatos.cpp
+	<cstring>
+	"ArchivoCandidatos.h"
+
+1666236105 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivocandidatos.h
+	<iostream>
+	"Candidato.h"
+
+1666305792 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\candidato.h
+	<cstring>
+	"funciones.h"
+	"EmpresaTrabajada.h"
+
+1666221721 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\funciones.h
+	"Recruiter.h"
+
+1665620186 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\empresatrabajada.h
+	"Empresa.h"
+	"Fecha.h"
+
+1665445068 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\empresa.h
+	<iostream>
+	"Ubicacion.h"
+
+1665445068 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\ubicacion.h
+	<iostream>
+
+1665616629 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\fecha.h
+
+1666235793 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivofavoritos.cpp
+	<iostream>
+	"ArchivoFavoritos.h"
+
+1666235835 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivofavoritos.h
+	"Favoritos.h"
+
+1665870412 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\favoritos.h
+	"Candidato.h"
+
+1666216338 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivorecruiter.cpp
+	<iostream>
+	<cstring>
+	"ArchivoRecruiter.h"
+
+1666134199 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivorecruiter.h
+	"Recruiter.h"
+
+1665619383 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\recruiter.h
+	<iostream>
+
+1666132114 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\busqueda.cpp
+	<iostream>
+	<cstring>
+	"Busqueda.h"
+
+1666131595 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\busqueda.h
+	<iostream>
+	<cstring>
+	"funciones.h"
+
+1666243087 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\candidato.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"Candidato.h"
+
+1665640174 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\empresa.cpp
+	<iostream>
+	<cstring>
+	"Empresa.h"
+
+1665682063 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\empresatrabajada.cpp
+	<iostream>
+	<cstring>
+	"EmpresaTrabajada.h"
+
+1665870412 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\favoritos.cpp
+	"Favoritos.h"
+
+1665616629 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1666220575 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\main.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"rlutil.h"
+	"Menu.h"
+	"ArchivoBusquedas.h"
+	"ArchivoCandidatos.h"
+	"EmpresaTrabajada.h"
+	"ArchivoRecruiter.h"
+
+1656724346 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1665533500 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\menu.h
+
+1666215860 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivobusquedas.h
+	"Busqueda.h"
+
+1665533493 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\menu.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"Menu.h"
+
+1665619383 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\recruiter.cpp
+	<cstring>
+	"Recruiter.h"
+
+1665638351 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\ubicacion.cpp
+	<iostream>
+	<cstring>
+	"Ubicacion.h"
+
+1666215860 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivobusquedas.cpp
+	<iostream>
+	"ArchivoBusquedas.h"
+
+1666305792 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\funciones.cpp
+	<iostream>
+	"funciones.h"
+	"rlutil.h"
+	"ArchivoBusquedas.h"
+	"ArchivoCandidatos.h"
+	"ArchivoRecruiter.h"
+	"ArchivoFavoritos.h"
+	"ArchivoElegidos.h"
+
+1666235793 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivoelegidos.cpp
+	<iostream>
+	"ArchivoElegidos.h"
+
+1666235921 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivoelegidos.h
+	"Favoritos.h"
+
