@@ -7,13 +7,14 @@ class Favoritos : public Candidato {
 
 private:
     int idBusqueda;
-    bool elegido;
+    int idRecruiter;
+
 public:
 
     void setIdBusqueda(int b);
-    void setElegido(bool e);
-    bool getElegido();
+    void setIdRecruiter(int i);
     int getIdBusqueda();
+    int getIdRecruiter();
 
     void Mostrar();
 

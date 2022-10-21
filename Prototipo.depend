@@ -7,7 +7,7 @@
 	<iostream>
 	"Candidato.h"
 
-1666305792 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\candidato.h
+1666378355 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\candidato.h
 	<cstring>
 	"funciones.h"
 	"EmpresaTrabajada.h"
@@ -35,7 +35,7 @@
 1666235835 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivofavoritos.h
 	"Favoritos.h"
 
-1665870412 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\favoritos.h
+1666380476 c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\favoritos.h
 	"Candidato.h"
 
 1666216338 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\archivorecruiter.cpp
@@ -59,7 +59,7 @@
 	<cstring>
 	"funciones.h"
 
-1666243087 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\candidato.cpp
+1666378364 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\candidato.cpp
 	<iostream>
 	<cstring>
 	"funciones.h"
@@ -75,14 +75,14 @@
 	<cstring>
 	"EmpresaTrabajada.h"
 
-1665870412 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\favoritos.cpp
+1666380476 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\favoritos.cpp
 	"Favoritos.h"
 
 1665616629 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\fecha.cpp
 	<iostream>
 	"Fecha.h"
 
-1666220575 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\main.cpp
+1666379990 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\main.cpp
 	<iostream>
 	<cstring>
 	"funciones.h"
@@ -131,7 +131,7 @@
 	<iostream>
 	"ArchivoBusquedas.h"
 
-1666305792 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\funciones.cpp
+1666379670 source:c:\users\pczartech\desktop\utn\repositorios\labo 2\proyecto\prototipo\prototipo\funciones.cpp
 	<iostream>
 	"funciones.h"
 	"rlutil.h"

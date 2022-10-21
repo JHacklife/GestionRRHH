@@ -158,7 +158,8 @@ int main()
 
     MenuPpal();
 
-    system("pause");
+
+    //system("pause");
 
 
 }

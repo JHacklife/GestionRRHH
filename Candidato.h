@@ -32,7 +32,7 @@ public:
     void setTelefono(int t);
     void setEmpresasTrabajadas(EmpresaTrabajada *vec);
     void setSeniority(string s);
-
+    void setStack(char vec[][tam_stack]);
     void setUbicacion(Ubicacion ubi);
     void setSalarioPretendido(float s);
 
@@ -44,6 +44,7 @@ public:
     EmpresaTrabajada *getEmpresasTrabajadas();
     string getSeniority();
     void getStackString(string Mstr[][tam_stack]);
+    void CopiarStack(char stck[][tam_stack]);
     void MostrarStack();
     Ubicacion getUbicacion();
     float getSalarioPretendido();

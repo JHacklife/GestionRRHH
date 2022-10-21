@@ -99,6 +99,68 @@ void Borrarcartel(int posx,int posy, int ancho, int alto){
 
 
 
+
+// FILTROS ----------------------------------------------------------------------------------------------
+
+void FiltroSalario(){
+
+    system("cls");
+    ArchivoFavoritos archFavoritos;
+
+
+    float salario;
+    cout<<"Ingrese salario maximo deseado: ";
+    cin>>salario;
+    cout<<endl;
+
+    int tam=archFavoritos.getCantidad();
+
+    Favoritos *vFavoritos = new Favoritos[tam];
+
+    for(int i=0; i<tam; i++){
+        vFavoritos[i]=archFavoritos.leer(i);
+    }
+
+    //Cuento las coincidencias para el filtro aplicado
+    int coincidencias=0;
+
+    for(int i=0; i<tam; i++){
+
+        if(vFavoritos[i].getSalarioPretendido()<=salario){
+
+            coincidencias++;
+        }
+    }
+
+    if(coincidencias>0){
+        //Vacio el archivo
+        archFavoritos.vaciar();
+
+        //Agrego las coincidencias al archivo vacio
+        for(int i=0; i<tam; i++){
+
+            if(vFavoritos[i].getSalarioPretendido()<=salario){
+
+                archFavoritos.guardar(vFavoritos[i]);
+            }
+        }
+        //Mostrar archivo antes de salir---> opcional
+        cout<<"Coincidencias encontradas, ver "<<"'Favoritos'"<<endl;
+    }
+    else{
+
+        //Si no hay coincidencias
+        cout<<"No se hallaron coincidencias, no hay nuevos favoritos"<<endl;
+    }
+        system("pause");
+    delete[] vFavoritos;
+
+}
+
+
+
+
+
 //MENUS
 
 //BUSQUEDAS - MENU
@@ -122,7 +184,7 @@ void MostrarBusquedasDisponibles(int _id){
 }
 
 
-void MenuBusqueda(int _idRecruiter,int &IdBusquedaActiva){
+void MenuBusqueda(Recruiter usuario,int &IdBusquedaActiva){
 
     bool on=true;
     char op;
@@ -145,7 +207,7 @@ void MenuBusqueda(int _idRecruiter,int &IdBusquedaActiva){
             {
                 system("cls");
                 //Mostrar Busquedas que coincidan con el id del recruiter
-                MostrarBusquedasDisponibles(_idRecruiter);
+                MostrarBusquedasDisponibles(usuario.getID());
                 cout<<endl;
                 system("pause");
             }
@@ -175,7 +237,7 @@ void MenuBusqueda(int _idRecruiter,int &IdBusquedaActiva){
                     if(pos!=-1){
 
                         busqueda=archivoB.leer(pos);
-                        if(busqueda.getIDRecruiter()==_idRecruiter){
+                        if(busqueda.getIDRecruiter()==usuario.getID()){
                             IdBusquedaActiva=busqueda.getID();
                             cout<<"Busqueda Activada correctamente"<<endl;
                         }
@@ -226,6 +288,96 @@ bool ExisteElegido(int _dni, int IdBusquedaActiva){
     return false;
 }
 
+
+//Menu Filtros
+
+void MenuFiltros(Recruiter usuario,int& IdBusquedaActiva){
+
+    ArchivoFavoritos archivoFav;
+    int cant = archivoFav.getCantidad();
+    if(cant<=0){
+        ArchivoCandidatos archivocand;
+        int cant2 = archivocand.getCantidad();
+        Candidato *candidatos = new Candidato[cant2];
+        Favoritos *favoritos = new Favoritos[cant2];
+        archivocand.leerTodos(candidatos,cant2);
+        //Matriz auxiliar para setear stack
+        char stck[cant_stack][tam_stack];
+
+        for(int i=0; i<cant2; i++){
+
+            //Carga los candidatos en el archivo de favoritos
+            favoritos[i].setIdBusqueda(IdBusquedaActiva);
+            favoritos[i].setIdRecruiter(usuario.getID());
+            favoritos[i].setDNI(candidatos[i].getDNI());
+            favoritos[i].setNombre(candidatos[i].getNombre());
+            favoritos[i].setApellido(candidatos[i].getApellido());
+            favoritos[i].setMail(candidatos[i].getMail());
+            favoritos[i].setTelefono(candidatos[i].getTelefono());
+            favoritos[i].setEmpresasTrabajadas(candidatos[i].getEmpresasTrabajadas());
+            favoritos[i].setSeniority(candidatos[i].getSeniority());
+            candidatos[i].CopiarStack(stck);
+            favoritos[i].setStack(stck);
+            favoritos[i].setUbicacion(candidatos[i].getUbicacion());
+            favoritos[i].setSalarioPretendido(candidatos[i].getSalarioPretendido());
+            archivoFav.guardar(favoritos[i]);
+
+        }
+
+
+        delete[] candidatos;
+        delete[] favoritos;
+    }
+
+    bool on = true;
+        char op;
+        while(on){
+            system("cls");
+
+            cout<<"1 - Filtrar por Salario pretendido"<<endl;
+            cout<<"2 - Filtrar por..."<<endl;
+            cout<<"3 - Filtrar por..."<<endl;
+            cout<<"4 - Filtrar por..."<<endl;
+            cout<<"5 - Filtrar por..."<<endl;
+            cout<<"6 - Filtrar por..."<<endl;
+            cout<<"7 - Filtrar por..."<<endl;
+            cout<<"0 - Volver a Seleccion"<<endl;
+
+            cout<<"Elegir opcion: "<<endl;
+            cin>>op;
+
+            switch(op){
+
+            case '1':
+                {
+                    FiltroSalario();
+                }
+                break;
+
+            case '2':
+
+                break;
+
+            case '3':
+
+                break;
+
+
+            case '0':
+                {
+                    on=false;
+                }
+                break;
+
+            default:
+
+                break;
+            }
+        }
+
+}
+
+
 //Menu Seleccion de Personal (filtros/canidatos/etc)
 
 void MenuSelecPersonal(Recruiter usuario, int& IdBusquedaActiva){
@@ -263,6 +415,7 @@ void MenuSelecPersonal(Recruiter usuario, int& IdBusquedaActiva){
                     candidatos[i].Mostrar();
                     cout<<"======================================================="<<endl;
                 }
+                system("pause");
                 delete[] candidatos;
 
             }
@@ -272,12 +425,8 @@ void MenuSelecPersonal(Recruiter usuario, int& IdBusquedaActiva){
         case '2'://Menu de Filtros
             {
                 system("cls");
-                int cant = archivoF.getCantidad();
-                if(cant==0){
-                    //Archivo de favoritos esta vacio, cargar toda la lista de candidatos en el archivo.
 
-
-                }
+                MenuFiltros(usuario,IdBusquedaActiva);
 
             }
 
@@ -299,7 +448,7 @@ void MenuSelecPersonal(Recruiter usuario, int& IdBusquedaActiva){
                         favoritos[i].Mostrar();
                         cout<<"====================================================="<<endl;
                     }
-
+                    system("pause");
                     delete[] favoritos;
                 }
                 //SI NO, ESTA VACIO, INFORMO:
@@ -404,7 +553,7 @@ void MenuSeleccion(Recruiter usuario,int &IdBusquedaActiva){
 
         case '1':
             system("cls");
-            MenuBusqueda(usuario.getID(),IdBusquedaActiva);
+            MenuBusqueda(usuario,IdBusquedaActiva);
             break;
 
         case '2':
@@ -447,7 +596,7 @@ void MenuLogin(int &IdBusquedaActiva){
         logeado = archivo.loginExitoso(_id,pass);
         }
         //Si el login es exitoso mandar al menu de seleccion
-        //Sino pregunta si desea reintentar, si dice que no, romper el while y mandar al menu ppal
+        //Sino pregunta si desea reintentar, si dice que no, mandar al menu ppal
 
         if(logeado){
             Recruiter usuario;
@@ -479,6 +628,8 @@ void MenuPpal(){
 
     while(on){
     int IdBusquedaActiva=-1;
+    ArchivoFavoritos archivoF;
+    archivoF.vaciar();
     system("cls");
     cout<<"1-LOGIN"<<endl;
     cout<<"0-SALIR"<<endl;
@@ -515,83 +666,6 @@ void MenuPpal(){
 
 
 
-//Menu Filtros
-
-void Filtros(int& IdBusquedaActiva){
-
-    ArchivoFavoritos archivoFav;
-    int cant = archivoFav.getCantidad();
-    if(cant<=0){
-        ArchivoCandidatos archivocand;
-        int cant2 = archivocand.getCantidad();
-        Candidato *candidatos = new Candidato[cant2];
-        Favoritos *favoritos = new Favoritos[cant2];
-        archivocand.leerTodos(candidatos,cant2);
-        for(int i=0; i<cant2; i++){
-
-            //Copiar candidato a favoritos ?
-            favoritos[i].setDNI(candidatos[i].getDNI());
-            favoritos[i].setApellido(candidatos[i].getApellido());
-            favoritos[i].setNombre(candidatos[i].getNombre());
-            favoritos[i].setEmpresasTrabajadas(candidatos[i].getEmpresasTrabajadas());
-            //favoritos[i].(candidatos[i].get);
-            favoritos[i].setIdBusqueda(IdBusquedaActiva);
-            archivocand.guardar(favoritos[i]);
-            favoritos[i].setIdBusqueda(IdBusquedaActiva);
-
-
-        }
-
-
-        delete[] candidatos;
-        delete[] favoritos;
-    }
-
-    bool on = true;
-        char op;
-        while(on){
-            system("cls");
-
-            cout<<"1 - Filtrar por Salario pretendido"<<endl;
-            cout<<"2 - Filtrar por..."<<endl;
-            cout<<"3 - Filtrar por..."<<endl;
-            cout<<"4 - Filtrar por..."<<endl;
-            cout<<"5 - Filtrar por..."<<endl;
-            cout<<"6 - Filtrar por..."<<endl;
-            cout<<"7 - Filtrar por..."<<endl;
-            cout<<"0 - Volver a Seleccion"<<endl;
-
-            cout<<"Elegir opcion: "<<endl;
-            cin>>op;
-
-            switch(op){
-
-            case '1':
-
-                break;
-
-            case 2:
-
-                break;
-
-            case 3:
-
-                break;
-
-
-            case 0:
-                {
-                    on=false;
-                }
-                break;
-
-            default:
-
-                break;
-            }
-        }
-
-}
 
 
 
@@ -599,57 +673,4 @@ void Filtros(int& IdBusquedaActiva){
 
 
 
-// FILTROS ----------------------------------------------------------------------------------------------
 
-void FiltroSalario(){
-
-    system("cls");
-    ArchivoFavoritos archFavoritos;
-
-
-    float salario;
-    cout<<"Ingrese salario maximo deseado: ";
-    cin>>salario;
-    cout<<endl;
-
-    int tam=archFavoritos.getCantidad();
-
-    Favoritos *vFavoritos = new Favoritos[tam];
-
-    for(int i=0; i<tam; i++){
-        vFavoritos[i]=archFavoritos.leer(i);
-    }
-
-    //Cuento las coincidencias para el filtro aplicado
-    int coincidencias=0;
-
-    for(int i=0; i<tam; i++){
-
-        if(vFavoritos[i].getSalarioPretendido()<=salario){
-
-            coincidencias++;
-        }
-    }
-
-    if(coincidencias>0){
-        //Vacio el archivo
-        archFavoritos.vaciar();
-
-        //Agrego las coincidencias al archivo vacio
-        for(int i=0; i<tam; i++){
-
-            if(vFavoritos[i].getSalarioPretendido()<=salario){
-
-                archFavoritos.guardar(vFavoritos[i]);
-            }
-        }
-        //Mostrar archivo antes de salir---> opcional
-        cout<<"Coincidencias encontradas, ver "<<"'Favoritos'"<<endl;
-        system("pause");
-    }
-    //Si no hay coincidencias
-    cout<<"No se hallaron coincidencias, no hay nuevos favoritos"<<endl;
-    system("pause");
-    delete[] vFavoritos;
-
-}

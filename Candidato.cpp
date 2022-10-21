@@ -33,6 +33,17 @@ void Candidato::setUbicacion(Ubicacion ubi){ubicacion=ubi;}
 
 void Candidato::setSalarioPretendido(float s){salarioPretendido=s;}
 
+void Candidato::setStack(char vec[][tam_stack]){
+
+    for(int i=0; i<cant_stack; i++){
+
+        for(int j=0; j<tam_stack; j++){
+
+            Stack[i][j]=vec[i][j];
+        }
+    }
+
+}
 
 
 int Candidato::getDNI(){return dni;}
@@ -197,6 +208,17 @@ void Candidato::cargarCadenaStack(int pos){
     Stack[pos][j]='\0';
     fflush(stdin);
 
+}
+
+//ACTUALIZACION
+void Candidato::CopiarStack(char stck[][tam_stack]){
+
+    for(int i=0; i<cant_stack; i++){
+
+        for(int j=0; j<tam_stack; j++){
+            stck[i][j] = Stack[i][j];
+        }
+    }
 }
 
 bool Candidato::StackVacio(int pos){
